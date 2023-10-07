@@ -1,0 +1,9 @@
+Servidor:
+- Exiba na tela cada mensagem recebida
+- Adicione um número único (id) para cara mensagem
+- Tenha como parâmetro um valor de mensagem para retornar apenas as mensagens deste id em diante
+
+Cliente:
+- Adicione a tag <nome> do utilizador em cada mensagem enviada
+- Uma opção para sair do programa
+- Após enviar a mensagem automaticamente limpar a tela e exibir toda a conversa novamente
