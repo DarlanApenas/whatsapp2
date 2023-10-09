@@ -3,13 +3,12 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 mensagens = []
-
 @app.route('/enviar', methods=['POST'])
 def enviar():
     msg = request.json.get('mensagem')
     if msg:
         mensagens.append(msg)
-        return jsonify({'status': 'Mensagem enviada'}), 200
+        return jsonify({'status': 'Mensagem enviada' }), 200
     return jsonify({'status': 'Erro ao enviar mensagem'}), 400
 
 @app.route('/receber', methods=['GET'])
