@@ -13,14 +13,12 @@ def enviar_mensagem(nome):
 def receber_mensagens(nome):
     resposta = requests.get(f'{SERVIDOR_URL}/receber')
     mensagens = resposta.json()['mensagens']
-    print("Mensagens recebidas:")
     for msg in mensagens:
         if msg.find(nome) == -1:
             print(f'- [bold green]{msg}[/bold green]')
         else:
             print(f'- [bold blue]{msg}[/bold blue]')
         
-
 if __name__ == '__main__':
     username = input("Digite seu nome: ")
     while True:
@@ -30,10 +28,8 @@ if __name__ == '__main__':
         escolha = input("Escolha uma opção: ")
         
         if escolha == '1':
-            os.system('cls')
             enviar_mensagem(username)
         elif escolha == '2':
-            os.system('cls')
             receber_mensagens(username)
         elif escolha == '0':
             os.system('cls')
